@@ -1,0 +1,23 @@
+\section{Examples of Copulae}
+\subsection{Fundamental Copulae}
+
+{\bf Independence Copula} The independence copula is 
+
+\begin{equation}
+	\Pi(u_1,...,u_d) = \prod_{i=1}^{d} u_i.
+\end{equation}
+
+{\bf Comonotonicity Copula}: is the Frechet upper bound from \eqref{eq:frechet_bound}:
+\begin{equation}
+	M(u_1,...,u_d) = \min \{u_1,..., u_d\}.
+\end{equation}
+This corresponds to the case of {\it perfectly positively dependent} rvs, i.e. they are (almost surely) strictly increasing functions of each other so that $X_i = T_i(X_1)$ for all $i=2,...,d$. More details to come.
+
+{\bf Countermonotonicity copula} is the two-dimensional Frechet lower bound copula from \eqref{eq:frechet_bound} given by:
+\begin{equation}
+	W(u, v) = \max (u + v -1, 0).
+\end{equation}
+
+\subsection{Implicit Copulae}
+Object is to construct joint CDF $C(u)$. This can be done by postulating an explicit function or by implicitly constructing a multivariate rv and infer the CDF of its rank.
+\subsection{Explicit Copulae}

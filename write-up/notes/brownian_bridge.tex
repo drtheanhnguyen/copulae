@@ -1,0 +1,68 @@
+\section{A Note on Brownian Bridge}
+Let $W$ be a Brownian motion with $W_0 = 0$ and $0\le s \le t$. We derive in the following distribution of the Brownian bridge:
+\begin{equation}
+W_s \| \{W_0 = 0, W_t = x\}
+\end{equation}
+for a given $x\in \bR$.
+To this end, we need the following basic result:
+\begin{lem}\label{lem_cond_density}
+	Let $X, Y$ be random variable with joint density function $f_{(X,Y)}(x,y) = \bP(X\in dx, Y \in dy)$. Denote by $f_Y()$ the density function of $Y$. Then $X\| Y = y$ has the density function given by:
+	\begin{equation}
+		f_{X|Y=y}(x) = \frac{f_{(X,Y)}(x,y)}{f_Y(y)} 1_{\{f_Y(y)\neq 0\}}.
+	\end{equation}
+\end{lem}
+\begin{proof}
+	This follows immediately from the Bayes' rule:
+	\begin{equation*}
+		\bP(X\in dx|Y=y) = \frac{\bP(X\in dx, Y\in dy)}{\bP(Y\in dy)}.
+	\end{equation*}
+	
+\end{proof}
+
+\begin{lem}\label{lem_dist_of_Ws_Wt}
+	The random variable 
+	$\begin{pmatrix}
+		W_s \\
+		W_t
+	\end{pmatrix}$
+	 is normally distributed as follows:
+	\begin{equation*}
+	\begin{pmatrix}
+		W_s \\ 
+		W_t
+	\end{pmatrix}
+	\sim \cN\left(0,\begin{pmatrix} s & s \\
+	s & t
+	\end{pmatrix}\right)
+	\end{equation*}
+\end{lem}
+\begin{proof}
+	This is basic.
+\end{proof}
+From Lemma \ref{lem_dist_of_Ws_Wt} we have
+\begin{equation}
+	f_{(W_s,W_t)}(x,y) = \frac{1}{2\pi \sqrt{s(t-s)}}\exp \left( -\frac{1}{2s(t-s)} (tx^2 - 2s x y + s y^2)\right).
+\end{equation}		
+Recall that $W_t \sim \cN(0,t)$ yielding
+\begin{equation}
+	f_{W_t}(x) = \frac{1}{\sqrt{2\pi t}} \exp\left( -\frac{1}{2 t} x^2\right).
+\end{equation}
+Applying Lemma \ref{lem_cond_density} and using the above equations yield
+\begin{align}
+ 	f_{W_s|W_t=y}(x) &= \frac{f_{(W_s,W_t)}(x,y)}{f_{W_t}(y)} \\ \nonumber
+ 	 & = \frac{1}{\sqrt{2\pi \frac{s(t-s)}{t}}} \exp\left( -\frac{t}{2s(t-s)} \left(y-\frac{s x}{t}\right)^2\right),
+\end{align}
+which implies that $W_s|\{W_0 = 0, W_t = x\}$ is normally distributed. More precisely,
+\begin{equation}
+	(W_s|\{W_0 = 0, W_t = x\}) \sim \cN \left( \frac{s}{t}x, \frac{s(t-s)}{t}\right).
+\end{equation}
+Generalization: If $W_0 = a$ for a given $a \in \bR$, by setting $\tilde{W}:= W-a$ we have
+\begin{equation}
+W_s-a|\{W_0 = a, W_t = b\} = (\tilde{W_s}|\{\tilde{W_0} = 0, \tilde{W_t} = b-a\}) \sim \cN \left( \frac{s}{t}(b-a), \frac{s(t-s)}{t}\right).
+\end{equation}
+Hence,
+\begin{equation}
+	W_s|\{W_0 = a, W_t = b\} \sim \cN(a+\frac{s}{t}(b-a), \frac{s(t-s)}{t}).
+\end{equation}
+
+

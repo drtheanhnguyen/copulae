@@ -1,0 +1,24 @@
+\section{Loss distribution and basic concepts}
+Consider a portfolio consisting of loans/trades with $n$ obligors. Loss function
+\begin{equation}
+L_n = \sum_{i=1}^{n}\omega_i \eta_i 1_{D_i}.
+\end{equation} 
+
+Using coupula to express obligors via a common systematic driver $X\sim\mathcal{N}(0,1)$, we obtain 
+\begin{lem}
+	\begin{equation}
+	L_n \rightarrow \bE[L_n |X] \text{ a.s.}
+	\end{equation}
+\end{lem}
+\begin{proof}
+	Denote by $\bP_x: = \bP(\cdot|X=x)$. We first prove that $L_n \rightarrow \bE[L_n|X=x]$ $\bP_x-$ a.s.
+\end{proof}
+
+Some preliminary results on
+
+\begin{lem}
+	Let X be a random variable with cdf $F$, then the random variable $U: = F(X)$ follows uniform distribution on unit internal, i.e. $F(X) \sim \mathcal{U}(0,1)$.
+\end{lem}
+\begin{proof}
+	Quite easy indeed. $\mathbb{P}(F(X)\le u) = \mathbb{P}(X\le F^{-1}(u)) = F(F^{-1}(u)) =u$.
+\end{proof}

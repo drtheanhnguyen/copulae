@@ -1,0 +1,55 @@
+\documentclass[a4paper]{article}
+\usepackage{graphicx,mathrsfs,amsfonts,fancyhdr,tabularx,listings,hyperref,color,picture,tikz,subcaption}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{wrapfig}
+\usepackage[ruled]{algorithm2e}
+\theoremstyle{definition}
+\newtheorem{df}{Definition}[section]
+\newtheorem*{rem}{Remark}
+\newcommand{\remend}{\hfill\text{$\diamond$}}
+\theoremstyle{plain}
+\newtheorem{thm}[df]{Theorem}
+\newtheorem{lem}[df]{Lemma}
+\newtheorem{cor}[df]{Corollary}
+\newtheorem{prop}[df]{Proposition}
+%=================
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bQ}{\mathbb{Q}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bT}{\mathbb{T}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\I}{\mathcal{I}}
+\newcommand{\K}{\mathcal{K}}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\fF}{\mathbf{F}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cU}{\mathcal{U}}
+%------------------------------------
+\newcommand*{\geninv}[1]{#1^{\leftarrow}}
+\newcommand*{\udist}{\mathcal{U}(0,1)}
+\newcommand*{\eqdist}{\overset{D}{=}}
+%=================
+%opening
+
+
+\title{Copulae Made Easy}
+\author{The Anh Nguyen}
+
+\begin{document}
+
+\maketitle
+
+%\begin{abstract}
+%	Copula theory
+%These notes provide theoretical foundation of the Basel RWA-formula and justify the IMM framework for counterparty credit risk.
+%\end{abstract}
+%\input{sec_basics}
+%\input{brownian_bridge}
+%###################
+\input{copula1}
+\input{fundamental_copulae}
+\end{document}
